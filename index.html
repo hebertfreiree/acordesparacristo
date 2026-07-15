@@ -69,7 +69,53 @@
 <link rel="icon" href="/wp-content/uploads/2024/10/cropped-Logo-acordes-para-cristo-1-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="/wp-content/uploads/2024/10/cropped-Logo-acordes-para-cristo-1-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2024/10/cropped-Logo-acordes-para-cristo-1-270x270.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<style id="apc-custom-fixes">
+/* Fix wp-emoji gigante (fallback) */
+img.emoji,img.wp-smiley{
+  display:inline-block !important;
+  height:1em !important;width:1em !important;
+  vertical-align:-.1em !important;
+  margin:0 .05em !important;
+  padding:0 !important;
+  border:none !important;box-shadow:none !important;
+  background:none !important;
+}
+
+/* Hero — reduz vídeo Panda pra caber melhor na primeira dobra */
+@media (min-width:768px){
+  iframe[src*="pandavideo"]{
+    max-width:640px !important;
+    margin:0 auto !important;
+    aspect-ratio:16/9 !important;
+    height:auto !important;
+  }
+  /* container do vídeo hero */
+  .elementor-video-iframe,.elementor-widget-video{
+    max-width:640px;
+    margin:0 auto;
+  }
+}
+@media (max-width:767px){
+  iframe[src*="pandavideo"]{
+    width:100% !important;
+    aspect-ratio:16/9 !important;
+    height:auto !important;
+  }
+}
+
+/* Bloco Acesso Vitalício — remove padding/margem excessivos */
+.elementor-icon-list-items li.elementor-icon-list-item{
+  padding:6px 0 !important;
+  margin:0 !important;
+}
+.elementor-icon-list-text{
+  font-size:1.02em !important;
+  line-height:1.5 !important;
+}
+</style>
+
+</head>
 <body class="home wp-singular page-template page-template-elementor_canvas page page-id-2351 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-2351">
 			<div data-elementor-type="wp-page" data-elementor-id="2351" class="elementor elementor-2351" data-elementor-post-type="page">
 				<div class="elementor-element elementor-element-435b840a e-flex e-con-boxed e-con e-parent" data-id="435b840a" data-element_type="container" id="topo">
@@ -742,7 +788,7 @@ Construiu uma comunidade de quase 2 milhões de seguidores nas redes sociais e j
 										<span class="elementor-icon-list-text">✅ Método completo </span>
 									</li>
 								<li class="elementor-icon-list-item">
-										<span class="elementor-icon-list-text"><img decoding="async" role="img" class="emoji" alt="✅" src="https://s.w.org/images/core/emoji/17.0.2/svg/2705.svg"> +de 20 louvores famosos</span>
+										<span class="elementor-icon-list-text">✅ +de 20 louvores famosos</span>
 									</li>
 								<li class="elementor-icon-list-item">
 										<span class="elementor-icon-list-text">✅ Garantia de 7 dias ou dinheiro de volta</span>
