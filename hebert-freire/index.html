@@ -183,6 +183,17 @@ details p{margin-top:12px;color:var(--text-mute);font-size:.98rem}
 /* footer */
 .foot{text-align:center;color:var(--text-dim);font-size:.85rem;margin-top:36px;padding-top:24px;border-top:1px solid var(--border)}
 .foot a{color:var(--text-mute)}
+
+.hero__avatar{
+  width:180px;height:180px;margin:0 auto 22px;
+  border-radius:50%;overflow:hidden;
+  background:var(--primary-soft);
+  border:3px solid var(--primary-border);
+  box-shadow:0 12px 32px var(--primary-glow);
+}
+.hero__avatar img{width:100%;height:100%;object-fit:cover;display:block}
+@media(min-width:768px){.hero__avatar{width:200px;height:200px}}
+
 </style>
 
 <script type="application/ld+json">
@@ -237,6 +248,7 @@ details p{margin-top:12px;color:var(--text-mute);font-size:.98rem}
 
   <section class="hero">
     
+    <div class="hero__avatar"><img src="/hebert-freire/assets/foto1.jpg" alt="Hebert Freire" width="200" height="200" fetchpriority="high"></div>
     <h1>Quem é <span style="color:var(--primary)">Hebert Freire</span>?</h1>
     <p class="lead">Professor de violão brasileiro. Criador do canal <strong>Hebert Freire</strong> no YouTube — um dos maiores canais de ensino de violão em português — e fundador do <strong>Clube das Cordas</strong>, escola online com mais de 20 mil alunos pagantes.</p>
   </section>
