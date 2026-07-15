@@ -70,50 +70,158 @@
 <link rel="apple-touch-icon" href="/wp-content/uploads/2024/10/cropped-Logo-acordes-para-cristo-1-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2024/10/cropped-Logo-acordes-para-cristo-1-270x270.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<style id="apc-custom-fixes">
-/* Fix wp-emoji gigante (fallback) */
+
+
+
+<!-- === APC · CSS Custom (SEO + design polish) === -->
+<style id="apc-custom">
+/* ===== Fix emojis WP gigantes ===== */
 img.emoji,img.wp-smiley{
   display:inline-block !important;
   height:1em !important;width:1em !important;
   vertical-align:-.1em !important;
-  margin:0 .05em !important;
-  padding:0 !important;
-  border:none !important;box-shadow:none !important;
-  background:none !important;
+  margin:0 .05em !important;padding:0 !important;
+  border:none !important;box-shadow:none !important;background:none !important;
 }
 
-/* Hero — reduz vídeo Panda pra caber melhor na primeira dobra */
+/* ===== VTurb Smart Player — reduzir no desktop ===== */
+vturb-smartplayer{
+  display:block !important;
+  max-width:340px !important;
+  margin:0 auto !important;
+  border-radius:16px !important;
+  overflow:hidden !important;
+  box-shadow:0 12px 32px rgba(59,91,218,.25) !important;
+}
+
+@media (min-width:1024px){
+  vturb-smartplayer{
+    max-width:380px !important;
+  }
+}
+
+/* Panda video iframe (outros vídeos da página) */
+iframe[src*="pandavideo"],iframe[id^="panda-"]{
+  max-width:640px !important;
+  width:100% !important;
+  margin:0 auto !important;
+  display:block !important;
+  aspect-ratio:16/9 !important;
+  height:auto !important;
+  border-radius:12px !important;
+}
+
+/* ===== Bloco de texto sob "Chegou a hora" — mais compacto ===== */
 @media (min-width:768px){
-  iframe[src*="pandavideo"]{
-    max-width:640px !important;
-    margin:0 auto !important;
-    aspect-ratio:16/9 !important;
-    height:auto !important;
-  }
-  /* container do vídeo hero */
-  .elementor-video-iframe,.elementor-widget-video{
-    max-width:640px;
-    margin:0 auto;
-  }
-}
-@media (max-width:767px){
-  iframe[src*="pandavideo"]{
-    width:100% !important;
-    aspect-ratio:16/9 !important;
-    height:auto !important;
+  .elementor-heading-title{
+    line-height:1.15 !important;
   }
 }
 
-/* Bloco Acesso Vitalício — remove padding/margem excessivos */
-.elementor-icon-list-items li.elementor-icon-list-item{
-  padding:6px 0 !important;
-  margin:0 !important;
+/* Título "Esse método nasceu..." — reduz tamanho no mobile */
+@media (max-width:767px){
+  .elementor-heading-title{
+    font-size:1.5rem !important;
+    line-height:1.2 !important;
+  }
+  vturb-smartplayer{
+    max-width:min(300px,90vw) !important;
+  }
 }
-.elementor-icon-list-text{
-  font-size:1.02em !important;
-  line-height:1.5 !important;
+
+/* Ícone de lista — evita esticar */
+.elementor-icon-list-icon svg{
+  max-width:32px !important;height:auto !important;
+}
+
+/* Espaçamento entre lista/título/vídeo mais apertado */
+.elementor-widget-heading,.elementor-widget-html{
+  margin-bottom:18px !important;
 }
 </style>
+
+<!-- === SEO · JSON-LD Schemas === -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Course",
+      "@id":"https://acordesparacristo.com.br/#course",
+      "name":"Acordes Para Cristo — Método de violão gospel",
+      "description":"Método completo pra tocar louvores no violão, do absoluto zero ao nível intermediário/avançado. Foco em louvores cristãos famosos como Ousado Amor e Ninguém Explica Deus.",
+      "provider":{"@type":"Organization","@id":"https://acordesparacristo.com.br/#org"},
+      "instructor":{"@type":"Person","@id":"https://acordesparacristo.com.br/#hebert"},
+      "url":"https://acordesparacristo.com.br/",
+      "inLanguage":"pt-BR",
+      "educationalLevel":"beginner",
+      "audience":{"@type":"EducationalAudience","educationalRole":"adult learner"},
+      "hasCourseInstance":{
+        "@type":"CourseInstance",
+        "courseMode":"online",
+        "courseWorkload":"PT10H",
+        "instructor":{"@id":"https://acordesparacristo.com.br/#hebert"}
+      },
+      "offers":{
+        "@type":"Offer",
+        "url":"https://sun.eduzz.com/2445250?cupom=CUPOMDODIA",
+        "priceCurrency":"BRL",
+        "category":"Digital course · Lifetime access",
+        "availability":"https://schema.org/InStock"
+      }
+    },
+    {
+      "@type":"Person",
+      "@id":"https://acordesparacristo.com.br/#hebert",
+      "name":"Hebert Freire",
+      "jobTitle":"Músico, professor de violão e criador de conteúdo",
+      "description":"Músico e professor com mais de 10 anos de experiência ensinando violão. Comunidade de quase 2 milhões de seguidores. Mais de 20 mil alunos formados.",
+      "url":"https://hebertfreire.com.br",
+      "sameAs":[
+        "https://www.instagram.com/hebertfreiree",
+        "https://www.youtube.com/@HebertFreire",
+        "https://www.tiktok.com/@hebertfreire"
+      ]
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://acordesparacristo.com.br/#org",
+      "name":"Acordes Para Cristo",
+      "url":"https://acordesparacristo.com.br/",
+      "logo":"https://acordesparacristo.com.br/wp-content/uploads/2024/10/cropped-Logo-acordes-para-cristo-1-270x270.png",
+      "founder":{"@id":"https://acordesparacristo.com.br/#hebert"},
+      "sameAs":["https://www.instagram.com/hebertfreiree"]
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://acordesparacristo.com.br/#website",
+      "url":"https://acordesparacristo.com.br/",
+      "name":"Acordes Para Cristo",
+      "publisher":{"@id":"https://acordesparacristo.com.br/#org"},
+      "inLanguage":"pt-BR"
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://acordesparacristo.com.br/#webpage",
+      "url":"https://acordesparacristo.com.br/",
+      "name":"Acordes Para Cristo — Aprenda a tocar louvores no violão do zero",
+      "isPartOf":{"@id":"https://acordesparacristo.com.br/#website"},
+      "about":{"@id":"https://acordesparacristo.com.br/#course"},
+      "inLanguage":"pt-BR"
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://acordesparacristo.com.br/#faq",
+      "mainEntity":[
+        {"@type":"Question","name":"Preciso já saber alguma coisa de violão?","acceptedAnswer":{"@type":"Answer","text":"Não. O método começa do absoluto zero — do nome das cordas até tocar louvores completos."}},
+        {"@type":"Question","name":"Por quanto tempo tenho acesso?","acceptedAnswer":{"@type":"Answer","text":"Acesso vitalício. Você paga uma vez e o curso é seu para sempre, incluindo atualizações futuras."}},
+        {"@type":"Question","name":"Quais formas de pagamento aceita?","acceptedAnswer":{"@type":"Answer","text":"Cartão de crédito parcelado em até 12x, Pix e boleto. Processado pela Eduzz."}},
+        {"@type":"Question","name":"E se eu não gostar do curso?","acceptedAnswer":{"@type":"Answer","text":"Você tem 7 dias de garantia incondicional. Se não gostar por qualquer motivo, devolvemos 100% do valor."}}
+      ]
+    }
+  ]
+}
+</script>
 
 </head>
 <body class="home wp-singular page-template page-template-elementor_canvas page page-id-2351 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-2351">

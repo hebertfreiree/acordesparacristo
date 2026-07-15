@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+
+Sitemap: https://acordesparacristo.com.br/sitemap.xml
